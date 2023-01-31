@@ -1,8 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Антон Рыбаков](https://up.htmlacademy.ru/htmlcss/36/user/2318767).
-* Наставник: `Антон Казаков `.
-* Ссылка на наставника: `https://htmlacademy.ru/profile/id798257 `.
+* Наставник: [Антон Казаков](https://htmlacademy.ru/profile/id798257).
 
 ---
 
