@@ -9,53 +9,55 @@
 
   <body>
     <header class="page-header">
-      <nav class="navigation">
-        <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" src="#" width="#" height="#" alt="Логотип города Седона">
-        </a>
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              О Седоне
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="catalog.html">
-              Гостиницы
-            </a>
-          </li>
-        </ul>
+      <div class="page-container">
+        <nav class="navigation">
+          <a class="navigation-logo" href="index.html">
+            <img class="page-header-logo" src="images/social/logo-sedona.svg" width="#" height="#" alt="Логотип города Седона">
+          </a>
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link navigation-link-current" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">
+                О Седоне
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="catalog.html">
+                Гостиницы
+              </a>
+            </li>
+          </ul>
 
-        <ul class="navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">
-                Поиск
-              </span>
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">
-                Избранное
-              </span>
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">
+          <ul class="navigation-user">
+            <li class="navigation-item">
+              <a class="navigation-link" href="search.html">
+                <img class="search-header-item" src="images/icons/search.svg" width="#" height="#" alt="Знак лупы">
+                <span class="visually-hidden">
+                  Поиск
+                </span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="favourites.html">
+                <img class="like-header-item" src="images/icons/like.svg" width="#" height="#" alt="Знак сердца">
+                <span class="visually-hidden">
+                  Избранное
+                </span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-button" href="#">
                 Хочу сюда
-              </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+              </a>
+            </li>
+          </ul>
+        </nav>
     </header>
+
 
     <main class="filter-catalog">
       <section class="filter-catalog">
@@ -192,7 +194,7 @@
         <ul class="hotel-list">
           <li class="hotel-item">
             <a class="hotel-item-link" href="#">
-              <img class="hotel-item-img" src="#" width="#" height="#" alt="Вид гостиницы">
+              <img class="hotel-item-img" src="images/hotels/hotel-1.jpg" width="#" height="#" alt="Вид гостиницы">
               <h3 class="hotel-item-title">
                 Amara Resort & Spa
               </h3>
@@ -215,7 +217,7 @@
           </li>
           <li class="hotel-item">
             <a class="hotel-item-link" href="#">
-              <img class="hotel-item-img" src="#" width="#" height="#" alt="Вид гостиницы">
+              <img class="hotel-item-img" src="images/hotels/hotel-2.jpg" width="#" height="#" alt="Вид гостиницы">
               <h3 class="hotel-item-title">
                 Villas at Poco Diablo
               </h3>
@@ -238,7 +240,7 @@
           </li>
           <li class="hotel-item">
             <a class="hotel-item-link" href="#">
-              <img class="hotel-item-img" src="#" width="#" height="#" alt="Вид гостиницы">
+              <img class="hotel-item-img" src="images/hotels/hotel-3.jpg" width="#" height="#" alt="Вид гостиницы">
               <h3 class="hotel-item-title">
                 Desert Quail Inn
               </h3>
@@ -261,7 +263,7 @@
           </li>
           <li class="hotel-item">
             <a class="hotel-item-link" href="#">
-              <img class="hotel-item-img" src="#" width="#" height="#" alt="Вид гостиницы">
+              <img class="hotel-item-img" src="images/hotels/hotel-4.jpg" width="#" height="#" alt="Вид гостиницы">
               <h3 class="hotel-item-title">
                 GreenTree Inn
               </h3>
@@ -361,24 +363,27 @@
           Социальные сети
         </h2>
         <ul class="footer-social-list">
-          <li class="footer-social-item-vk">
+          <li class="footer-social item-vk">
             <a class="button" href="#">
+              <img class="social-logo-1" src="images/social/vk.svg" alt="Вконатке">
               <span class="visually-hidden">
                 Наша группа в ВКонтакте
               </span>
             </a>
           </li>
 
-          <li class="footer-social-item-tg">
+          <li class="footer-social item-tg">
             <a class="button" href="#">
+              <img class="social-logo-2" src="images/social/telegram.svg" alt="телеграм">
               <span class="visually-hidden">
                 Наш телеграм канал
               </span>
             </a>
           </li>
 
-          <li class="footer-social-item-youtube">
+          <li class="footer-social item-youtube">
             <a class="button" href="#">
+              <img class="social-logo-3" src="images/social/youtube.svg" alt="Ютуб">
               <span class="visually-hidden">
                 Наш Ютюб канал
               </span>
@@ -400,7 +405,7 @@
         <h2 class="visually-hidden">
           Сделано в htmlacademy.ru
         </h2>
-        <img class="footer-logo-img" src="#" alt="Логотип htmlacademy" width="#" height="#">
+        <img class="footer-logo-img" src="images/social/academy.svg" alt="Логотип htmlacademy" width="#" height="#">
       </section>
     </footer>
   </body>
