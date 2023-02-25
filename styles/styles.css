@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #FFFFFF;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-header {
+color: #000000;
+background-color: #FFFFFF;
+}
+
+.navigation-item {
+  list-style-type: none;
+}
+
+.navigation-link {
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+/* Button */
+/* сделать чек по цвету */
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756157;
+  border-radius: 4px;
+}
+
+.welcome-sedona{
+  background-image: url("..images\background\index-background.jpg");
+  background-repeat: no-repeat;
+  background-color: #82B3D3;
+  width: 1200px;
+  height: 485px;
+  position: relative;
+  text-align: center;
+}
+
+.welcome-sedona::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 57px;
+  background-image: url("../images/Vector.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom: -1px;
+}
+
+
+.Intro-sedona h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-page-title p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333333;
+}
+
+.advantages-item {
+  background-color: #82B3D3;
+}
+
+.advantages-item h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.advantages-item p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.advantages-item-2
+.advantages-item-3
+.advantages-item-4
+.ervice-item-1
+.ervice-item-2
+.ervice-item-3 {
+  list-style-type: none;
+  text-align: center;
+}
+
+/* .navigation-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.navigation-button {
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: rgba(117, 97, 87, 1);
+}
+
+.main-page {
+  font-weight: 700;
+} */
