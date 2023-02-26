@@ -338,18 +338,23 @@
         </ul>
       </section>
 
-      <section class="subscribe">
+      <section class="subscribe-catalog">
+        <h2 class="visually-hidden">
+          Форма для подписки на рассылку
+        </h2>
+        <div class="subscribe-sign-up-catalog">
         <h2 class="subscribe-intro">
           Подпишитесь на рассылку
         </h2>
         <p class="subscribe-description">
           Только полезная информация и никакого спама, честное бойскаутское
         </p>
-        <form class="subscribe form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="email">
+        </div>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="email" >
             Ваш e-mail
           </label>
-          <input type="email" id="email" name="subscribe-email" placeholder="Ваш e-mail">
+          <input type="email" id="email" name="subscribe-email" placeholder="Ваш e-mail" required>
           <button class="subscribe-button" type="submit">
             Подписаться
           </button>
@@ -364,8 +369,8 @@
           Социальные сети
         </h2>
         <ul class="footer-social-list">
-          <li class="footer-social item-vk">
-            <a class="button" href="#">
+          <li class="footer-social-item-catalog">
+            <a class="button" href="https://vk.com/htmlacademy" rel="nofollow noreferer">
               <img class="social-logo-1" src="images/social/vk.svg" alt="Вконатке">
               <span class="visually-hidden">
                 Наша группа в ВКонтакте
@@ -373,8 +378,8 @@
             </a>
           </li>
 
-          <li class="footer-social item-tg">
-            <a class="button" href="#">
+          <li class="footer-social-item-catalog">
+            <a class="button" href="https://t.me/htmlacademy" rel="nofollow noreferer">
               <img class="social-logo-2" src="images/social/telegram.svg" alt="телеграм">
               <span class="visually-hidden">
                 Наш телеграм канал
@@ -382,8 +387,8 @@
             </a>
           </li>
 
-          <li class="footer-social item-youtube">
-            <a class="button" href="#">
+          <li class="footer-social-item-catalog">
+            <a class="button" href="https://www.youtube.com/user/htmlacademyru#" rel=nofollow noreferer>
               <img class="social-logo-3" src="images/social/youtube.svg" alt="Ютуб">
               <span class="visually-hidden">
                 Наш Ютюб канал
@@ -397,7 +402,7 @@
         <h2 class="visually-hidden">
           Контактный номер
         </h2>
-        <a class="footer-contact-phone" href="+78128121212">
+        <a class="footer-contact-phone-catalog" href="tel:+78128121212">
           +7 (812) 812-12-12
         </a>
       </section>
