@@ -365,6 +365,8 @@ body {
 
 /* Заинтересовались? */
 .service-order {
+  text-align: center;
+  margin: 0 auto;
   padding: 96px 304px;
 }
 .service-order h2 {
@@ -385,8 +387,6 @@ body {
 .subscribe {
   background-image: url("../images/background/background-subscribe.jpg");
   background-repeat: no-repeat;
-  width: 1200px;
-  height: 415px;
   color: #ffffff;
 }
 
@@ -405,9 +405,7 @@ body {
   text-align: center;
 }
 
-.subscribe-button {
-  background: #82b3d3;
-}
+
 
 .service-order-button{
   font-weight: 700;
@@ -417,16 +415,48 @@ body {
   width: 574px;
   border: none;
 }
+
+.newsletter-flex {
+  text-align: center;
+  margin: 0 auto;
+  padding: 96px 258px 104px 258px;
+}
+
+
 /*ПОДВАЛ-INDEX*/
 .footer-page {
   color: #000000;
   background: white;
 }
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+  width: 100%;
+}
 .footer-social-item a {
   list-style-type: none;
+  display: inline;
 }
 .footer-social-item a {
   background-color: rgba(5, 5, 5, 0);
+}
+
+.footer-social-item {
+  list-style-type: none;
+  display: inline;
+}
+
+.footer-contact-phone {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  font-style: normal;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 /* КАТАЛОГ */
@@ -435,18 +465,25 @@ body {
   color: #ffffff;
   background-color: #82b3d3;
   background-image: url("../images/background/background-filter.jpg");
-  width: 1200px;
-  height: 412px;
+  width: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  /* flex удалю */
+  background-size: 100% auto;
+  min-height: 412px;
 }
 
 .filter-catalog-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+}
+
+.catalog-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .catalog-select-list,
@@ -600,14 +637,12 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   border: 0;
+  background: #82b3d3;
+  color: #ffffff;
 }
 
 /* ПОДВАЛ КАТАЛОГА */
 
-.footer-page {
-  color: #000000;
-  background: white;
-}
 
 .footer-social-item-catalog a {
   list-style-type: none;
@@ -625,4 +660,39 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+}
+
+.footer-page {
+  color: #000000;
+  background: white;
+}
+
+.footer-social-ca {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+  width: 100%;
+}
+.footer-social-item a {
+  list-style-type: none;
+  display: inline;
+}
+.footer-social-item a {
+  background-color: rgba(5, 5, 5, 0);
+}
+
+.footer-social-item {
+  list-style-type: none;
+  display: inline;
+}
+
+.footer-contact-phone {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  font-style: normal;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
 }
