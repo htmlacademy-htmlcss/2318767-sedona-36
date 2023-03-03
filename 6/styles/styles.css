@@ -43,10 +43,10 @@ body {
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
-.logo
-{
+.logo {
   display: block;
   margin: 0 auto;
 }
@@ -128,23 +128,12 @@ body {
   padding: 69px 247.5px;
 }
 
-
 .intro-sedona h2 {
-  white-space: pre-line;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
-}
-
-.main-page-title p {
-  white-space: pre-line;
-  font-size: 22px;
-  line-height: 26px;
-  text-align: center;
-  color: #333333;
-  width: 651px;
 }
 
 /* advanatges */
@@ -157,16 +146,13 @@ body {
   color: #ffffff;
 }
 
-
 .advantages-item-other h3 {
-  white-space: pre-line;
   margin-top: 102px;
   width: 175px;
   margin-left: 112.5px;
 }
 
 .advantages-item-other p{
-  white-space: pre-line;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -177,9 +163,9 @@ body {
   width: 400px;
 }
 
-
 /* Это палка */
-.advantages-item-other h3:after{
+
+.advantages-item h3:after{
   content: "";
   width: 60px;
   height: 2px;
@@ -187,18 +173,8 @@ body {
   display: block;
   position: relative;
   margin-top: 30px;
-  margin-left: 57.5px;
-}
-
-.advantages-item h3:after  {
-  content: "";
-  width: 60px;
-  height: 2px;
-  background: rgba(0, 0, 0, 0.3);
-  display: block;
-  position: relative;
-  margin-top: 30px;
-  margin-left: 85px;
+  margin-bottom: 30px;
+  margin-left: 170px;
 }
 
 .advantages-title {
@@ -206,15 +182,13 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  color: #333333;
-
 }
 
 
 .advantages-description {
   font-size: 18px;
   line-height: 21px;
-  color: #333333;
+  /* color: #333333; */
 }
 
 .advantages-flex,
@@ -227,30 +201,50 @@ body {
 .advantages-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
   display: flex;
-  width: 1200px;
-  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .advantages-item {
-  width: 400px;
   list-style-type: none;
-  text-align: center;
-  padding: 112.5px 85px;
+  background: #82B3D3;
+  min-height: 385px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Фоны для блоков*/
+.advantages-item-image {
+  display: flex;
+  align-items: flex-end;
+}
 
+/* Фоны и цвета для блоков*/
 
-.advantages-item:nth-child(2),
-.advantages-item:nth-child(4)  {
+.advantages-item:nth-child(1),
+.advantages-item:nth-child(7) {
+  color: #ffffff;
+}
+
+.advantages-item:nth-child(3),
+.advantages-item:nth-child(5)  {
   background: rgba(131, 179, 211, 0.12);
+  color: #333333;
 }
 
-.advantages-item:nth-child(3) {
-  background: rgba(131, 179, 211, 0.02);;
+.advantages-item:nth-child(4) {
+  background: rgba(131, 179, 211, 0.02);
+  color: #333333;
 }
 
+.advantages-item:nth-child(3) h3:after,
+.advantages-item:nth-child(4) h3:after,
+.advantages-item:nth-child(5) h3:after {
+  background: rgba(0, 0, 0, 0.3);
+}
 
 /* Услуги */
 
@@ -291,7 +285,6 @@ body {
   padding: 112.5px 85px;
 }
 
-
 .service-item:nth-child(1) {
   background: url("../images/advantages/advanteges-housing-icon.svg") no-repeat 50% 80px rgba(131, 179, 211, 0.12);
 }
@@ -304,46 +297,12 @@ body {
   background: url("../images/advantages/advanteges-souvenir-icon.svg") no-repeat 50% 80px rgba(131, 179, 211, 0.12);
 }
 
-
-/* .service-item:first-child:before {
-  content: "";
-  background-image: url("../images/advantages/advanteges-housing-icon.svg");
-  display: block;
-  width: 100%;
-  height: 72px;
-  background-repeat: no-repeat;
-  position: absolute;
-  color: #83b3d3;
-
-}
-
-.service-item:nth-child(2)::before {
-  content: "";
-  display: block;
-  background-image: url("../images/advantages/advanteges-eating-icon.svg");
-  width: 100%;
-  height: 70px;
-  background-repeat: no-repeat;
-  position: absolute;
-}
-
-.service-item:last-child::before {
-  content: "";
-  display: block;
-  background-image: url("../images/advantages/advanteges-souvenir-icon.svg");
-  width: 100%;
-  height: 76px;
-  background-repeat: no-repeat;
-  position: absolute;
-} */
-
 .service-item,
 .service-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-
 }
 
 .service-item,
@@ -354,6 +313,7 @@ body {
   text-align: center;
   color: #333333;
 }
+
 /* вернуть если сломал иконки
 .service-list li:first-child {
   background: rgba(131, 179, 211, 0.12);
@@ -364,11 +324,13 @@ body {
 } */
 
 /* Заинтересовались? */
+
 .service-order {
   text-align: center;
   margin: 0 auto;
   padding: 96px 304px;
 }
+
 .service-order h2 {
   font-weight: 700;
   font-size: 30px;
@@ -388,26 +350,43 @@ body {
   background-image: url("../images/background/background-subscribe.jpg");
   background-repeat: no-repeat;
   color: #ffffff;
+  background-size: 100% auto;
+  width: 1200px;
+  text-align: center;
+  padding-top: 96px;
+  padding-bottom: 104px;
 }
 
-.subscribe-sign-up h2 {
+.subscribe-catalog {
+  background-repeat: no-repeat;
+  color: #000000;
+  background-size: 100% auto;
+  width: 1200px;
+  text-align: center;
+  padding-top: 96px;
+  padding-bottom: 104px;
+}
+
+.subscribe-intro {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
+  padding: 0;
+  margin: 0 398px 20px;
 }
 
-.subscribe-sign-up p {
+.subscribe-description {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  padding: 0;
+  margin: 20px 362px 54px;
 }
 
-
-
-.service-order-button{
+.service-order a {
   font-weight: 700;
   text-transform: uppercase;
   padding: 8px 50px;
@@ -422,7 +401,6 @@ body {
   padding: 96px 258px 104px 258px;
 }
 
-
 /*ПОДВАЛ-INDEX*/
 .footer-page {
   color: #000000;
@@ -436,17 +414,14 @@ body {
   padding: 25px 0;
   width: 100%;
 }
+
 .footer-social-item a {
   list-style-type: none;
   display: inline;
-}
-.footer-social-item a {
-  background-color: rgba(5, 5, 5, 0);
 }
 
-.footer-social-item {
-  list-style-type: none;
-  display: inline;
+.footer-social-item a {
+  background-color: rgba(5, 5, 5, 0);
 }
 
 .footer-contact-phone {
@@ -454,7 +429,6 @@ body {
   font-size: 40px;
   line-height: 40px;
   font-style: normal;
-  color: black;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -618,19 +592,6 @@ body {
 
 /* подписка на рассылку */
 
-.subscribe-sign-up-catalog h2 {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-}
-.subscribe-sign-up-catalog P {
-  font-size: 22px;
-  line-height: 26px;
-  text-align: center;
-  color: #333333;
-}
 .subscribe-button {
   font-weight: 700;
   font-size: 20px;
@@ -639,14 +600,17 @@ body {
   border: 0;
   background: #82b3d3;
   color: #ffffff;
+  width: 232px;
+  height: 52px;
+  padding: 0;
 }
 
 /* ПОДВАЛ КАТАЛОГА */
 
-
 .footer-social-item-catalog a {
   list-style-type: none;
 }
+
 .footer-social-item-catalog a {
   background-color: rgba(5, 5, 5, 0);
 }
@@ -674,10 +638,12 @@ body {
   padding: 25px 0;
   width: 100%;
 }
+
 .footer-social-item a {
   list-style-type: none;
   display: inline;
 }
+
 .footer-social-item a {
   background-color: rgba(5, 5, 5, 0);
 }
@@ -687,12 +653,14 @@ body {
   display: inline;
 }
 
-.footer-contact-phone {
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 40px;
-  font-style: normal;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
+.email {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  background-color: #F2F2F2;
+  width: 452px;
+  height: 52px;
+  padding: 0;
+  border: 0;
 }
