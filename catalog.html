@@ -6,6 +6,7 @@
     <meta name="keywords" content="Седона, гостиница, Аризона">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Каталог</title>
+    <link rel="icon" type="image/svg" href="images/social/favicon.svg">
   </head>
 
   <body>
@@ -18,7 +19,7 @@
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="index.html">
+              <a class="navigation-link" href="index.html">
                 Главная
               </a>
             </li>
@@ -28,14 +29,14 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">
+              <a class="navigation-link navigation-link-current" href="catalog.html">
                 Гостиницы
               </a>
             </li>
           </ul>
 
           <ul class="navigation-user">
-            <li class="navigation-item">
+            <li class="navigation-item-user">
               <a class="navigation-link" href="search.html">
                 <img class="search-header-item" src="images/icons/search.svg" width="#" height="#" alt="Знак лупы">
                 <span class="visually-hidden">
@@ -43,7 +44,7 @@
                 </span>
               </a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item-user" data-count="12">
               <a class="navigation-link" href="favourites.html">
                 <img class="like-header-item" src="images/icons/like.svg" width="#" height="#" alt="Знак сердца">
                 <span class="visually-hidden">
@@ -52,7 +53,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-button" href="#">
+              <a class="button" href="#">
                 Хочу сюда
               </a>
             </li>
@@ -61,7 +62,7 @@
       </header>
 
 
-      <main class="filter">
+      <main class="main-filter">
         <section class="filter-catalog">
           <h1 class="filter-catalog-title">
             Гостиницы Седоны
@@ -69,11 +70,16 @@
           <ol class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
-                Домой
+                <span class="visually-hidden">Домой</span>
+                <svg width="13" height="21" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.39282 0L0.392822 5.80006V12.0001H12.3928V5.80006L6.39282 0ZM11.3928 11.0001H1.39282V6.20005L6.39282 1.4L11.3928 6.20005V11.0001Z" fill="white"/>
+                  <path d="M4.39282 10.0001H5.39282V7.50005H7.39282V10.0001H8.39282V6.50005H4.39282V10.0001Z" fill="white"/>
+                  </svg>
+
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">
+              <a class="breadcrumbs-link" href="catalog.html">
                 Гостиницы
               </a>
             </li>
@@ -81,7 +87,7 @@
           <form class="catalog-select" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-select-box">
               <legend class="catalog-select-title">
-                Инфраструктура
+                Инфраструктура:
               </legend>
               <ul class="catalog-select-list">
                 <li class="catalog-select-item">
@@ -107,7 +113,7 @@
 
             <fieldset class="catalog-select-box">
               <legend class="catalog-select-title">
-                Тип жилья
+                Тип жилья:
               </legend>
               <ul class="catalog-select-list">
                 <li class="catalog-select-item">
@@ -135,37 +141,36 @@
               <legend class="catalog-price-title">
                 Стоимость, ₽:
               </legend>
-              <div>
+              <div class="catalog-price-box-input">
                 <label for="price-min" class="visually-hidden">
                   от
                 </label>
                 <input id="price-min" type="number" value="0" min="0" max="9000" name="price-min-field"
                   placeholder="от">
-              </div>
-              <div>
                 <label for="price-max" class="visually-hidden">
                   до
                 </label>
                 <input id="price-max" type="number" value="9000" min="0" max="9000" name="price-max-field"
                   placeholder="до">
-              </div>
-              <div>
                 <label for="range" class="visually-hidden">
                   Ползунок
                 </label>
                 <input id="range" type="range" min="0" max="9000">
               </div>
             </fieldset>
+            <div class="catalog-button">
             <button class="button button-apply" type="submit">
               Применить
             </button>
             <button class="button button-reset" type="reset">
               Сбросить
             </button>
+          </div>
           </form>
         </section>
 
         <section class="find-hotels">
+          <div class="find-hotels-search">
           <h2 class="find-hotels-title">
             Найдено гостиниц:
             <span>
@@ -177,23 +182,47 @@
               Сначала дешевые
             </option>
           </select>
-          <div>
-            <a class="button button-light" href="#">
+          <div class="card-type">
+            <a class="button button-light checked" href="#">
               <span class="visually-hidden">
                 Показать список
               </span>
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 0H0V6H4V0Z" fill="black"/>
+                <path d="M16 0H12V6H16V0Z" fill="black"/>
+                <path d="M10 0H6V6H10V0Z" fill="black"/>
+                <path d="M4 8H0V14H4V8Z" fill="black"/>
+                <path d="M16 8H12V14H16V8Z" fill="black"/>
+                <path d="M10 8H6V14H10V8Z" fill="black"/>
+                </svg>
             </a>
             <a class="button button-light" href="#">
               <span class="visually-hidden">
                 Показать элемент c описанием'
               </span>
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 12H0V14H16V12Z" fill="black"/>
+                <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black"/>
+                </svg>
             </a>
             <a class="button button-light" href="#">
               <span class="visually-hidden">
                 Показать карточки
               </span>
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 0H0V2H2V0Z" fill="black"/>
+                <path d="M16 0H4V2H16V0Z" fill="black"/>
+                <path d="M2 4H0V6H2V4Z" fill="black"/>
+                <path d="M16 4H4V6H16V4Z" fill="black"/>
+                <path d="M2 8H0V10H2V8Z" fill="black"/>
+                <path d="M16 8H4V10H16V8Z" fill="black"/>
+                <path d="M2 12H0V14H2V12Z" fill="black"/>
+                <path d="M16 12H4V14H16V12Z" fill="black"/>
+                </svg>
             </a>
           </div>
+          </div>
+          <div class="sorting-hotels">
           <ul class="hotel-list">
             <li class="hotel-item">
               <a class="hotel-item-link" href="#">
@@ -214,6 +243,12 @@
               <a class="button hotel-item-select-button" href="#">
                 В избранное
               </a>
+              <div class="hotel-item-rating-star" aria-label="Рейтинг 4 из 5">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
               <span class="hotel-item-rating">
                 Рейтинг: 8,5
               </span>
@@ -234,9 +269,15 @@
               <a class="button hotel-item-about-button" href="#">
                 Подробнее
               </a>
-              <a class="button hotel-item-select-button" href="#">
+              <a class="button hotel-item-selected-button" href="#">
                 В избранном
               </a>
+              <div class="hotel-item-rating-star" aria-label="Рейтинг 4 из 5">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
               <span class="hotel-item-rating">
                 Рейтинг: 9,2
               </span>
@@ -260,6 +301,11 @@
               <a class="button hotel-item-select-button" href="#">
                 В избранное
               </a>
+              <div class="hotel-item-rating-star" aria-label="Рейтинг 3 из 5">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
               <span class="hotel-item-rating">
                 Рейтинг: 6,9
               </span>
@@ -283,12 +329,17 @@
               <a class="button hotel-item-select-button" href="#">
                 В избранное
               </a>
+              <div class="hotel-item-rating-star" aria-label="Рейтинг 2 из 5">
+                <span></span>
+                <span></span>
+              </div>
               <span class="hotel-item-rating">
                 Рейтинг: 5,0
               </span>
             </li>
           </ul>
-
+        </div>
+         <div class="pagination-main">
           <ul class="pagination" aria-label="pagination">
             <li class="pagination-item">
               <a class="pagination-link pagination-current" aria-current="page">
@@ -323,7 +374,7 @@
               </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">
+              <a class="pagination-link pagination-link" href="#">
                 <span class="visually-hidden">
                   page-dots
                 </span>
@@ -339,6 +390,7 @@
               </a>
             </li>
           </ul>
+        </div>
         </section>
 
         <section class="subscribe-catalog">
@@ -349,7 +401,7 @@
                 Подпишитесь на рассылку
               </h2>
               <p class="subscribe-description">
-                Только полезная информация и никакого спама, честное бойскаутское
+                Только полезная информация и никакого спама, <br> честное бойскаутское
               </p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="email">
