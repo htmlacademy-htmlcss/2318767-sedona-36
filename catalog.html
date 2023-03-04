@@ -37,8 +37,8 @@
 
           <ul class="navigation-user">
             <li class="navigation-item-user">
-              <a class="navigation-link" href="search.html">
-                <img class="search-header-item" src="images/icons/search.svg" width="#" height="#" alt="Знак лупы">
+              <a class="navigation-link navigation-search" href="search.html">
+
                 <span class="visually-hidden">
                   Поиск
                 </span>
@@ -54,7 +54,7 @@
             </li>
             <li class="navigation-item">
               <a class="button" href="#">
-                Хочу сюда
+                Хочу сюда!
               </a>
             </li>
           </ul>
@@ -85,53 +85,76 @@
             </li>
           </ol>
           <form class="catalog-select" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-select-box">
+            <fieldset class="catalog-select-box infrastructure">
               <legend class="catalog-select-title">
                 Инфраструктура:
               </legend>
               <ul class="catalog-select-list">
                 <li class="catalog-select-item">
                   <label class="select">
-                    <input class="select-input" type="checkbox" name="swimingpool" checked>
-                    Бассейн
+                    <input class="select-input visually-hidden" type="checkbox" name="swimingpool" checked>
+                    <span class="control-mark">
+                    </span>
+                    <span class="choosing-input-text">
+                      Бассейн
+                    </span>
                   </label>
                 </li>
                 <li class="catalog-select-item">
                   <label class="select">
-                    <input class="select-input" type="checkbox" name="parking" checked>
+                    <input class="select-input visually-hidden" type="checkbox" name="parking" checked>
+                    <span class="control-mark">
+                    </span>
+                    <span class="choosing-input-text">
                     Парковка
-                  </label>
+                    </span>
                 </li>
                 <li class="catalog-select-item">
                   <label class="select">
-                    <input class="select-input" type="checkbox" name="wi-fi" checked>
+                    <input class="select-input visually-hidden" type="checkbox" name="wi-fi" checked>
+                    <span class="control-mark">
+                    </span>
+                    <span class="choosing-input-text">
                     wi-fi
+                  </span>
                   </label>
                 </li>
               </ul>
             </fieldset>
 
-            <fieldset class="catalog-select-box">
+            <fieldset class="catalog-select-box type">
               <legend class="catalog-select-title">
                 Тип жилья:
               </legend>
               <ul class="catalog-select-list">
                 <li class="catalog-select-item">
                   <label class="select">
-                    <input class="select-input" type="radio" name="catalog-filter" value="Hotel" checked>
+                    <input class="select-input visually-hidden" type="radio" name="catalog-filter" value="Hotel" checked>
+                    <span class="control-mark-extra">
+                    </span>
+                    <span class="choosing-input-text">
                     Гостиница
+                    </span>
                   </label>
                 </li>
                 <li class="catalog-select-item">
                   <label class="select">
-                    <input class="select-input" type="radio" name="catalog-filter" value="motel" checked>
+                    <input class="select-input visually-hidden" type="radio" name="catalog-filter" value="motel" checked>
+                    <span class="control-mark-extra">
+                    </span>
+                    <span class="choosing-input-text">
                     Мотель
+                    </span>
                   </label>
                 </li>
                 <li class="catalog-select-item">
                   <label class="select">
-                    <input class="select-input" type="radio" name="catalog-filter" value="apartments" checked>
+                    <input class="select-input visually-hidden" type="radio" name="catalog-filter" value="apartments" checked>
+                    <span class="control-mark-extra">
+                    </span>
+                    <span class="choosing-input-text">
                     Апартаменты
+                   </span>
                   </label>
                 </li>
               </ul>
@@ -142,20 +165,33 @@
                 Стоимость, ₽:
               </legend>
               <div class="catalog-price-box-input">
-                <label for="price-min" class="visually-hidden">
+                <input id="price-min" type="number" min="0" max="9000" name="price-min-field"
+                  placeholder="0">
+                <label for="price-min">
                   от
                 </label>
-                <input id="price-min" type="number" value="0" min="0" max="9000" name="price-min-field"
-                  placeholder="от">
-                <label for="price-max" class="visually-hidden">
-                  до
+                <input id="price-max" type="number" min="0" max="9000" name="price-max-field"
+                  placeholder="9000">
+                <label for="price-max">
+                    до
                 </label>
-                <input id="price-max" type="number" value="9000" min="0" max="9000" name="price-max-field"
-                  placeholder="до">
+                <div class="range">
+                  <div class="range-bar" style="left: 0; width: 226px;">
+                    <button class="range-toggle toggle-min" type="button">
+                     <span class="visually-hidden">Изменить минимальную цену
+                     </span>
+                    </button>
+                    <button class="range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <!-- версия бара без стилизации но интерактивная -->
+                <!-- <input id="range" type="range" min="0" max="9000">
                 <label for="range" class="visually-hidden">
                   Ползунок
-                </label>
-                <input id="range" type="range" min="0" max="9000">
+                </label> -->
               </div>
             </fieldset>
             <div class="catalog-button">
