@@ -150,7 +150,7 @@ body {
 }
 
 .navigation-item a {
-  padding: 20px 16px;
+  padding: 19px 16px;
 }
 
 .navigation-item-user {
@@ -159,7 +159,7 @@ body {
 
 .navigation-item-user a {
   display: block;
-  padding: 24px 13px 23px 13px;
+  padding: 22px 13px 23px 13px;
 }
 
 .navigation-item .button {
@@ -259,7 +259,6 @@ body {
   background: #e5e5e5;
 }
 
-
 .intro-title {
   white-space: pre-line;
   font-weight: 700;
@@ -320,7 +319,7 @@ body {
   position: relative;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-left: 170px;
+  margin-left: 150px;
 }
 
 .advantages-title {
@@ -357,11 +356,12 @@ body {
 .advantages-item {
   list-style-type: none;
   background: #82b3d3;
-  min-height: 385px;
-  width: 400px;
+  min-height: 345px;
+  width: 360px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 20px 20px 20px 20px;
 }
 
 .advantages-item-image {
@@ -587,6 +587,19 @@ body {
   text-decoration: none;
 }
 
+.button-social:hover {
+  color: #68a2ca;
+}
+
+.button-social:focus {
+  color: #68a2ca;
+}
+
+.button-social:active {
+  color: rgba(104, 162, 202, 0.3);
+  background: #82b3d3;
+}
+
 /* КАТАЛОГ */
 
 .filter-catalog {
@@ -598,12 +611,35 @@ body {
   background-size: 100% 100%;
   min-height: 412px;
   margin-top: -5px;
-
 }
 
 .footer-address-phone-contact {
   color: #000000;
   text-decoration: none;
+}
+
+.footer-address-phone-contact:hover {
+  color: #756157;
+}
+
+.footer-address-phone-contact:focus {
+  color: #756157;
+}
+
+.footer-address-phone-contact:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.footer-logo:hover {
+  color: #756157;
+}
+
+.footer-logo:focus {
+  color: #756157;
+}
+
+.footer-logo:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .filter-catalog-title {
@@ -668,6 +704,18 @@ body {
 
 .catalog-select-item:not(:last-child) {
   margin-bottom: 16px;
+}
+
+.catalog-select-item .select:hover {
+  opacity: 0.6;
+}
+
+.catalog-select-item .select:active {
+  opacity: 0.3;
+}
+
+.select-input:focus-visible + .mark {
+  outline: 3px solid #83b3d3;
 }
 
 .catalog-price-box {
@@ -820,6 +868,24 @@ body {
   margin-bottom: 32px;
 }
 
+.catalog-price-box-input input:hover {
+  background: #e6e6e6;
+}
+
+.catalog-price-box-input input:focus {
+  background: #e6e6e6;
+}
+
+/*ОТКЛЮЧАЕМ СТРЕЛКИ В ФОРМЕ*/
+.catalog-price-box-input input[type="number"]::-webkit-outer-spin-button,
+.catalog-price-box-input input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.catalog-price-box-input input::placeholder {
+  color: black;
+}
+
 .catalog-button {
   display: flex;
   flex-direction: column;
@@ -840,6 +906,20 @@ body {
   margin-bottom: 32px;
 }
 
+.button.button-apply:focus {
+  background: #68a2ca;
+}
+
+.button.button-apply:active {
+  background: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button.button-apply:disabled {
+  color: #ddd4d4;
+  pointer-events: none;
+}
+
 .button.button-reset {
   font-weight: 700;
   font-size: 16px;
@@ -851,6 +931,24 @@ body {
   background: rgba(5, 5, 5, 0);
   border: 0;
   cursor: pointer;
+}
+
+.button.button-reset:hover {
+  opacity: 0.6;
+}
+
+.button.button-reset:focus-visible {
+  color: #ffffff;
+  outline: 3px solid #83b3d3;
+}
+
+.button.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button.button-reset:disabled {
+  color: #ddd4d4;
+  pointer-events: none;
 }
 
 /* breadcrumbs */
@@ -886,6 +984,18 @@ body {
   text-decoration: none;
 }
 
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* Боковые кнопки, не уверен в них */
 .button.button-light {
   background-color: #ffffff;
@@ -897,6 +1007,25 @@ body {
   background: #ffffff;
   border: 2px solid #000000;
   border-radius: 4px;
+}
+
+.button.button-light:hover {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.button.button-light:focus-visible {
+  outline: 2px solid #68a2ca;
+}
+
+.button.button-light:active {
+  border: 2px solid #000000;
+}
+
+.button.button-light:disabled {
+  color: #ddd4d4;
+  pointer-events: none;
 }
 
 .card-type {
@@ -924,6 +1053,20 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+}
+
+.select-control:hover {
+  border: 2px solid #68a2ca;
+}
+
+.select-control:hover:focus {
+  outline: 2px solid #68a2ca;
+}
+
+.select-control:hover:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
 
 .find-hotels-search {
@@ -1070,9 +1213,8 @@ body {
 .hotel-item-about-button {
   display: block;
   width: 140px;
-  padding-top: 8px;
-  padding-bottom: 8px;
   text-align: center;
+  padding: 8px 8px 8px 8px;
 }
 
 .hotel-item-select-button {
@@ -1082,6 +1224,34 @@ body {
   padding-top: 8px;
   padding-bottom: 8px;
   text-align: center;
+}
+
+.hotel-item-selected-button {
+  background: #7db54f;
+  display: block;
+  width: 140px;
+  /* padding-top: 8px;
+  padding-bottom: 8px; */
+  padding: 8px 1px 8px 1px;
+  text-align: center;
+}
+
+.hotel-item-select-button:hover {
+  background: #68a2ca;
+}
+
+.hotel-item-select-button:focus {
+  background: #68a2ca;
+}
+
+.hotel-item-select-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background: #82b3d3;
+}
+
+.hotel-item-selected-button:disabled {
+  color: #ddd4d4;
+  pointer-events: none;
 }
 
 .hotel-item-rating-star {
@@ -1109,15 +1279,6 @@ body {
   border-radius: 4px;
   padding-top: 9px;
   padding-bottom: 8px;
-}
-
-.hotel-item-selected-button {
-  background: #7db54f;
-  display: block;
-  width: 140px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  text-align: center;
 }
 
 .pagination-main {
@@ -1155,7 +1316,7 @@ body {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   color: #ffffff;
   background-color: #82b3d3;
@@ -1164,6 +1325,20 @@ body {
   font-size: 20px;
   line-height: 36px;
   text-transform: uppercase;
+}
+
+.pagination-link:not(.pagination-current, .pagination-dots):hover {
+  background: #68a2ca;
+  outline: 1px solid #82b3d3;
+}
+
+.pagination-link:not(.pagination-dots):focus {
+  background: #68a2ca;
+  outline: 1px solid #82b3d3;
+}
+
+.pagination-link:not(.pagination-dots):active {
+  background: #82b3d3;
 }
 
 /* Рейтинг */
