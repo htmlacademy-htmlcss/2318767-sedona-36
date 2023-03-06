@@ -91,7 +91,6 @@ body {
 .navigation {
   display: flex;
   min-height: 64px;
-  /* margin-bottom: -3px; */
 }
 
 .navigation-logo {
@@ -229,7 +228,6 @@ body {
   background-repeat: no-repeat;
   background-color: #82b3d3;
   min-height: 485px;
-  margin-top: -5px;
 }
 
 .welcome-sedona::after {
@@ -238,7 +236,7 @@ body {
   width: 100%;
   height: 57px;
   background-image: url("../images/splash.svg");
-  position: relative;
+  position: absolute;
   background-repeat: no-repeat;
   bottom: -25px;
 }
@@ -261,18 +259,8 @@ body {
   background: #e5e5e5;
 }
 
-/* .intro-sedona {
-  margin: 0 auto;
-  text-align: center;
-  padding: 69px 247.5px;
-} */
 
 .intro-title {
-  /* font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase; */
   white-space: pre-line;
   font-weight: 700;
   font-size: 30px;
@@ -348,7 +336,6 @@ body {
   font-size: 18px;
   line-height: 21px;
   margin: 0;
-  /* color: #333333; */
 }
 
 .advantages-flex,
@@ -436,8 +423,6 @@ body {
   color: #333333;
 }
 
-/* background-image: url */
-
 .service-item::before {
   content: "";
   background-repeat: no-repeat;
@@ -522,7 +507,7 @@ body {
   width: 100%;
   color: #ffffff;
   background-size: 100% auto;
-  min-height: 414.86px;
+  min-height: 415px;
   text-align: center;
   margin-top: 1px;
 }
@@ -533,7 +518,7 @@ body {
   width: 100%;
   color: #000000;
   background-size: 100% auto;
-  min-height: 414.86px;
+  min-height: 415px;
   text-align: center;
   margin-top: 1px;
 }
@@ -565,12 +550,6 @@ body {
   align-items: center;
   margin-bottom: 104px;
 }
-
-/* .newsletter-flex {
-  text-align: center;
-  margin: 0 auto;
-  padding: 96px 258px 104px 258px;
-} */
 
 /*ПОДВАЛ-INDEX*/
 
@@ -619,6 +598,7 @@ body {
   background-size: 100% 100%;
   min-height: 412px;
   margin-top: -5px;
+
 }
 
 .footer-address-phone-contact {
@@ -1053,9 +1033,6 @@ body {
 }
 
 .hotel-item-title {
-  /* font-weight: 700;
-  font-size: 24px;
-  line-height: 28px; */
   margin: 0;
 }
 
