@@ -47,7 +47,6 @@ body {
 .page-header {
   color: #000000;
   background-color: #ffffff;
-  margin-bottom: 3px;
 }
 
 .main-page .main-filter {
@@ -230,7 +229,7 @@ body {
   min-height: 485px;
 }
 
-.welcome-sedona::after {
+/* .welcome-sedona::after {
   content: "";
   display: block;
   width: 100%;
@@ -239,7 +238,7 @@ body {
   position: absolute;
   background-repeat: no-repeat;
   bottom: -25px;
-}
+} */
 
 .button:hover {
   background: #615048;
@@ -597,7 +596,6 @@ body {
 
 .button-social:active {
   color: rgba(104, 162, 202, 0.3);
-  background: #82b3d3;
 }
 
 /* КАТАЛОГ */
@@ -628,6 +626,11 @@ body {
 
 .footer-address-phone-contact:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+.footer-logo {
+  color: #000000;
+  min-width: 115px;
 }
 
 .footer-logo:hover {
@@ -677,6 +680,7 @@ body {
   position: relative;
   display: block;
   padding-left: 36px;
+  cursor: pointer;
 }
 
 .catalog-select-list,
@@ -906,18 +910,17 @@ body {
   margin-bottom: 32px;
 }
 
-.button.button-apply:focus {
+.button.button-apply:hover {
   background: #68a2ca;
 }
 
-.button.button-apply:active {
+.button.button-apply:focus {
   background: #82b3d3;
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .button.button-apply:disabled {
-  color: #ddd4d4;
-  pointer-events: none;
+  background: #68a2ca;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button.button-reset {
@@ -1212,7 +1215,7 @@ body {
 
 .hotel-item-about-button {
   display: block;
-  width: 140px;
+  width: 122px;
   text-align: center;
   padding: 8px 8px 8px 8px;
 }
@@ -1384,14 +1387,6 @@ body {
 
 /* ПОДВАЛ КАТАЛОГА */
 
-.footer-social-item-catalog a {
-  list-style-type: none;
-}
-
-.footer-social-item-catalog a {
-  background-color: rgba(5, 5, 5, 0);
-}
-
 .footer-contact-phone-catalog {
   font-weight: 400;
   font-size: 40px;
@@ -1409,12 +1404,6 @@ body {
   justify-content: space-between;
   padding: 25px 0;
   width: 100%;
-}
-
-.footer-social-item a {
-  display: block;
-  padding: 15px 13px;
-  background-color: rgba(5, 5, 5, 0);
 }
 
 .email {
