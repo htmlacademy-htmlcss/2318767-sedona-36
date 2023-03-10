@@ -717,7 +717,6 @@ body {
   opacity: 0.3;
 }
 
-
 .catalog-price-box {
   padding: 0;
   margin-left: 140px;
@@ -752,7 +751,7 @@ body {
 .catalog-price-box-input label:first-of-type {
   grid-column: 1 / 2;
   position: absolute;
-  color: black;
+  color: #000000;
   padding-top: 12px;
   padding-left: 106px;
   opacity: 0.3;
@@ -760,6 +759,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  z-index: 2;
 }
 
 .catalog-price-box-input input:nth-of-type(2) {
@@ -776,13 +776,12 @@ body {
   border-radius: 0 4px 4px 0;
   box-sizing: border-box;
   border: 2px solid rgba(80, 55, 80, 0);
-  cursor: pointer;
 }
 
 .catalog-price-box-input label:nth-of-type(2) {
   grid-column: 2 / 2;
   position: absolute;
-  color: black;
+  color: #000000;
   padding-top: 12px;
   padding-left: 106px;
   opacity: 0.3;
@@ -790,8 +789,25 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  z-index: 2;
 }
-/* версия бара стилизацикй не интерактивная */
+
+.range-input:hover {
+  background-color: #e6e6e6;
+}
+
+.range-input:focus {
+  position: relative;
+  z-index: 1;
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.range-input:active {
+  background-color: #f2f2f2;
+  outline: 2px solid #000000;
+}
+
 .range {
   grid-column: 1 / -1;
   position: relative;
@@ -842,45 +858,25 @@ body {
 
 .range-toggle:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
 }
 
-.range-toggle:focus-visible {
-  outline: 3px solid #83B3D3;
+.range-toggle:focus {
+  border: 3px solid #83b3d3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:active {
-  outline: 2px solid #83B3D3;
+  border: 2px solid #83b3d3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
-.range-toggle:disabled {
-  background-color: gray;
-  color: gray;
-  pointer-events: none;
+.toggle-min {
+  left: -10px;
 }
 
-/* версия бара без стилизации интерактивная */
-/* .catalog-price-box-input input:last-of-type {
-  grid-column: 1 / -1;
-  width: 288px;
-  cursor: pointer;
-
-} */
-
-/* .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-} */
+.toggle-max {
+  right: -10px;
+}
 
 .catalog-price-title {
   font-weight: 700;
@@ -905,7 +901,7 @@ body {
 }
 
 .catalog-price-box-input input::placeholder {
-  color: black;
+  color: #000000;
 }
 
 .catalog-button {
@@ -1024,24 +1020,22 @@ body {
   border-radius: 4px;
 }
 
-.button.button-light.checked {
+.button.button-light-checked {
   background: #ffffff;
   border: 2px solid #000000;
   border-radius: 4px;
 }
 
 .button.button-light:hover {
-  background-color: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 4px;
+  border-color: #000000;
 }
 
-.button.button-light:focus-visible {
-  outline: 2px solid #68a2ca;
+.button.button-light:focus {
+  border-color: #68a2ca;
 }
 
 .button.button-light:active {
-  border: 2px solid #000000;
+  border-color: #000000;
 }
 
 .button.button-light:disabled {
@@ -1116,15 +1110,22 @@ body {
   height: 49px;
 }
 
+.control:hover {
+  opacity: 0.6;
+}
+
 .select-input[type="checkbox"]:checked + .control-mark {
   background: #ffffff url(../images/icons/choice-accept.svg) no-repeat 50% 50%;
 }
 
 .select-input:focus + .control-mark,
-.select-input:focus + .control-mark-radio {
+.select-input:focus + .control-mark-extra {
   outline: solid 3px #83b3d3;
 }
 
+.control:active {
+  opacity: 0.3;
+}
 
 .select-input[type="radio"]:checked + .control-mark-extra::before {
   position: absolute;
@@ -1140,7 +1141,6 @@ body {
 .select-input:focus-visible + .mark {
   outline: 3px solid #83b3d3;
 }
-
 
 .control-mark {
   position: absolute;
@@ -1282,6 +1282,16 @@ body {
 .hotel-item-selected-button:disabled {
   color: #ddd4d4;
   pointer-events: none;
+}
+
+.hotel-item-selected-button:hover,
+.hotel-item-selected-button:focus {
+  background-color: #6c9e42;
+}
+
+.hotel-item-selected-button:active {
+  background-color: #7db54f;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-item-rating-star {
@@ -1456,7 +1466,7 @@ body {
 }
 
 .subscribe-form .email:not(:placeholder-shown) {
-  border: 2px solid black;
+  border: 2px solid #000000;
 }
 
 /* Модальное коно */
@@ -1496,7 +1506,7 @@ body {
   cursor: pointer;
   width: 52px;
   height: 52px;
-  background: #F2F2F2;
+  background: #f2f2f2;
   border-radius: 50%;
   border: 0;
   right: 0;
@@ -1517,16 +1527,16 @@ body {
 }
 
 .modal-close-button:hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .modal-close-button:focus-visible {
-  background-color: #E6E6E6;
-  outline: 3px solid #83B3D3;
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
 }
 
 .modal-close-button:active {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .modal-close-button .check:active {
@@ -1580,7 +1590,7 @@ body {
   border: 0;
   width: 440px;
   height: 48px;
-  background: #F2F2F2;
+  background: #f2f2f2;
   border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
@@ -1600,16 +1610,16 @@ body {
 }
 
 .modal-select .field:hover {
-  background: #E6E6E6;
+  background: #e6e6e6;
 }
 
 .modal-select .field:focus-visible {
-  background: #E6E6E6;
-  outline: 3px solid #83B3D3;
+  background: #e6e6e6;
+  outline: 3px solid #83b3d3;
 }
 
 .modal-select .field:not(:placeholder-shown) {
-  border: 2px solid black;
+  border: 2px solid #000000;
   outline: none;
 }
 
@@ -1644,7 +1654,7 @@ body {
   padding: 0;
   width: 31px;
   height: 48px;
-  background: #F2F2F2;
+  background: #f2f2f2;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -1655,7 +1665,7 @@ body {
 .modal-toggle-min {
   width: 40px;
   height: 48px;
-  background: #F2F2F2;
+  background: #f2f2f2;
   border: 0;
   border-radius: 4px 0 0 4px;
   cursor: pointer;
@@ -1666,7 +1676,7 @@ body {
 .modal-toggle-max {
   width: 40px;
   height: 48px;
-  background: #F2F2F2;
+  background: #f2f2f2;
   border: 0;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
@@ -1682,7 +1692,7 @@ body {
 .modal-toggle-min:focus-visible svg,
 .modal-toggle-max:focus-visible svg {
   color: #000000;
-  outline: 3px solid #82B3D3;
+  outline: 3px solid #82b3d3;
   border-radius: 4px;
 }
 
@@ -1703,12 +1713,8 @@ body {
   display: none;
 }
 
-.number-of-customers input[type='number'] {
-  -moz-appearance:textfield;
-}
-
 .field-small::placeholder {
-  color: black;
+  color: #000000;
   text-align: center;
 }
 
@@ -1722,7 +1728,7 @@ body {
   padding: 0;
   font-weight: 400;
   font-size: 16px;
-  color: #FF5757;
+  color: #ff5757;
   margin-left: 157px;
   margin-bottom: 23px;
 }
@@ -1757,8 +1763,8 @@ body {
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
-  background: #82B3D3;
+  color: #ffffff;
+  background: #82b3d3;
   cursor: pointer;
   overflow-wrap: break-word;
   border: 0;
@@ -1769,16 +1775,16 @@ body {
 }
 
 .button-modal:hover {
-  background: #68A2CA;
+  background: #68a2ca;
 }
 
 .button-modal:focus {
-  background: #68A2CA;
+  background: #68a2ca;
 }
 
 .button-modal:active {
   color: rgba(255, 255, 255, 0.3);
-  background: #82B3D3;
+  background: #82b3d3;
 }
 
 .button-modal :disabled {
@@ -1790,7 +1796,7 @@ body {
 .tooltip-toggle {
   border: 0;
   padding: 0;
-  background: #83B3D3;
+  background: #83b3d3;
   width: 26px;
   height: 26px;
   border-radius: 50%;
@@ -1810,11 +1816,10 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  display: block;
   width: 216px;
   min-height: 110px;
   padding: 21px 18px 14px 22px;
