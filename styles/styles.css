@@ -257,6 +257,11 @@ body {
   background: #e5e5e5;
 }
 
+.intro-sedona {
+  padding: 33px 275px 89px 275px;
+  margin: 0;
+}
+
 .intro-title {
   white-space: pre-line;
   font-weight: 700;
@@ -265,8 +270,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 69px;
-  padding-bottom: 25px;
 }
 
 .intro-description {
@@ -276,8 +279,8 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333333;
+  width: 651px;
   margin: 0;
-  padding-bottom: 90px;
 }
 
 /* advanatges */
@@ -403,22 +406,39 @@ body {
 .services-offer {
   margin: 0 auto;
   width: 505px;
-  padding: 64px 347.5px;
+  padding: 64px 348px 64px 348px;
 }
 
 .services-offer h2 {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  color: #000000;
   text-align: center;
   text-transform: uppercase;
+  margin: 0 0 20px 0;
 }
 
 .services-offer p {
   font-size: 22px;
   line-height: 26px;
+  color: #000000;
   text-align: center;
-  color: #333333;
+  width: 499px;
+  margin: 0;
+}
+
+.service-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.service-item {
+  width: 400px;
+  text-align: center;
+  padding: 81px 85px;
 }
 
 .service-item::before {
@@ -451,19 +471,17 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  color: #333333;
   margin: 0;
 }
 
-.service-item {
-  width: 400px;
-  text-align: center;
-  padding: 81px 85px;
-}
+
 /* Заинтересовались? */
 
 .service-order {
   text-align: center;
-  padding: 96px 304px;
+  padding: 102px 304px 95px 304px;
+  margin: 0;
 }
 
 .service-order h2 {
@@ -486,7 +504,6 @@ body {
   text-align: center;
   background: #756157;
   border-radius: 4px;
-  padding: 8px 49px;
   text-decoration: none;
   font-size: 20px;
   line-height: 50px;
@@ -496,6 +513,7 @@ body {
   max-width: 375px;
   min-height: 52px;
   margin: 54px auto 0;
+
 }
 
 .subscribe {
@@ -1450,7 +1468,7 @@ body {
   color: #000000;
   background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
-  width: 452px;
+  width: 429px;
   height: 52px;
   padding: 0;
   border: 2px solid rgba(80, 55, 80, 0);
