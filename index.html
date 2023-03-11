@@ -352,175 +352,176 @@
           </a>
         </section>
       </footer>
+
       <div class="modal-container modal-container-close">
-        <div class="modal-window">
-          <button class="modal-close-button">
+        <div class="modal modal-search">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden"> Закрыть </span>
             <span class="check"> </span>
           </button>
-          <section class="modal-content">
-            <form
-              class="modal-form"
-              action="https://echo.htmlacademy.ru/"
-              method="post"
-            >
-              <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-              <fieldset class="modal-fieldset">
-                <legend class="visually-hidden">Форма поиска госитинц.</legend>
-                <ul class="hotel-search">
-                  <li class="arrival-date">
-                    <label class="modal-select">
-                      Дата заезда:
-                      <input
-                        class="field"
-                        type="text"
-                        name="arrival"
-                        placeholder="27 апреля 2020"
-                        required
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form
+            class="search-form"
+            action="https://echo.htmlacademy.ru/"
+            method="post"
+          >
+            <p class="hotel-search">
+              <label class="date-input" for="checkin-date">
+                Дата Заезда:
+              </label>
+              <input
+                class="field"
+                type="text"
+                id="checkin-date"
+                required
+                placeholder="Укажите дату"
+                name="check-in"
+                value="27 апреля 2020"
+              />
+              <button class="button" name="calendar" type="submit"></button>
+              <span class="visually-hidden"> Календарь </span>
+              <span class="error-message">
+                Мы не можем отправить вас в прошлое.
+              </span>
+            </p>
+            <p class="hotel-search">
+              <label class="date-input" for="checkout-date">
+                Дата Выезда:
+              </label>
+              <input
+                class="field"
+                type="text"
+                id="checkout-date"
+                required
+                placeholder="Укажите дату"
+                name="check-out"
+                value="1 сентября 2023"
+              />
+              <button class="button" name="calendar" type="submit"></button>
+              <span class="visually-hidden"> Календарь </span>
+              <span class="message">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
+            </p>
+            <div class="visitor-counts">
+              <label class="adults-count" for="adults-count-input"
+                >Взрослые:
+              </label>
+              <span class="adult-count-wrapper">
+                <button class="modal-toggle-min" type="button">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M3 9V11H17V9H3Z" fill="currentColor" />
+                  </svg>
+                  <span class="visually-hidden"> Минус </span>
+                </button>
+                <input
+                  class="adults-count-input modal-input"
+                  type="number"
+                  value="2"
+                  id="adults-count-input"
+                  name="adults count"
+                  required
+                />
+                <button class="modal-toggle-max" type="button">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="visually-hidden"> Плюс </span>
+                </button>
+              </span>
+              <span class="kids-count kids-count-icon">
+                <label class="kids-count" for="kids-count-input"> Дети: </label>
+                <span class="tooltip">
+                  <button
+                    class="tooltip-toggle"
+                    type="button"
+                    aria-labelledby="tooltip-label-kids"
+                  >
+                    <svg
+                      class="tooltip-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                      width="26"
+                      height="26"
+                      fill="none"
+                      viewBox="0 0 26 26"
+                    >
+                      <circle cx="13" cy="13" r="13" fill="#83b3d3" />
+                      <path
+                        fill="#ffffff"
+                        fill-rule="evenodd"
+                        d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z"
+                        clip-rule="evenodd"
                       />
-                    </label>
-                    <button
-                      class="button"
-                      name="calender"
-                      type="submit"
-                    ></button>
-                    <p>Мы не можем отправить вас в прошлое.</p>
-                  </li>
-                  <li class="departure-date">
-                    <label class="modal-select"
-                      >Дата выезда:
-                      <input
-                        class="field"
-                        type="text"
-                        name="departure"
-                        placeholder="1 сентября 2021"
-                        required
-                      />
-                    </label>
-                    <button
-                      class="button"
-                      name="calender"
-                      type="submit"
-                    ></button>
-                    <p>На эти даты есть свободные номера. Пока есть.</p>
-                  </li>
-                  <li class="customers-adults">
-                    <span> Взрослые: </span>
-                    <div class="toggle-flex">
-                      <button class="modal-toggle-min">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M3 9V11H17V9H3Z" fill="currentColor" />
-                        </svg>
-                        <span class="visually-hidden"> Меньше. </span>
-                      </button>
-                      <label class="number-of-customers">
-                        <input
-                          class="field-small"
-                          type="number"
-                          name="adults"
-                          placeholder="2"
-                          required
-                        />
-                      </label>
-                      <button class="modal-toggle-max">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <span class="visually-hidden"> Больше. </span>
-                      </button>
-                    </div>
-                  </li>
-                  <li class="customers-children">
-                    <span> Дети: </span>
-                    <div class="form-label">
-                      <div class="tooltip">
-                        <button
-                          class="tooltip-toggle"
-                          type="button"
-                          aria-label="Всплывающая подсказка"
-                        >
-                          <svg
-                            width="3"
-                            height="12"
-                            viewBox="0 0 3 12"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M0.393066 0H2.39307V2H0.393066V0ZM2.39307 12H0.393066V3H2.39307V12Z"
-                              fill="white"
-                            />
-                          </svg>
-                        </button>
-                        <span class="tooltip-text">
-                          Укажите количество детей, которые будут с вами,
-                          возраст которых от 6 до 18 лет. Дети до 6 лет
-                          размещаются бесплатно.
-                        </span>
-                      </div>
-                    </div>
-                    <div class="toggle-flex">
-                      <button class="modal-toggle-min">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M3 9V11H17V9H3Z" fill="currentColor" />
-                        </svg>
-                        <span class="visually-hidden"> Меньше. </span>
-                      </button>
-                      <label class="number-of-customers">
-                        <input
-                          class="field-small"
-                          type="number"
-                          name="children"
-                          placeholder="2"
-                        />
-                      </label>
-                      <button class="modal-toggle-max">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <span class="visually-hidden"> Больше. </span>
-                      </button>
-                    </div>
-                  </li>
-                  <li class="modal-result">
-                    <button class="button-modal" type="submit">Найти</button>
-                  </li>
-                </ul>
-              </fieldset>
-            </form>
-          </section>
+                    </svg>
+                  </button>
+                  <span
+                    class="tooltip-text"
+                    role="tooltip"
+                    id="tooltip-label-kids"
+                    >Укажите количество детей, которые будут с вами, возраст
+                    которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+              </span>
+              <span class="kids-count-wrapper">
+                <button class="modal-toggle-min" type="button">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M3 9V11H17V9H3Z" fill="currentColor" />
+                  </svg>
+                  <span class="visually-hidden"> Минус </span>
+                </button>
+                <input
+                  class="kids-count-input modal-input"
+                  type="number"
+                  value="2"
+                  id="kids-count-input"
+                  name="kids count"
+                  required
+                />
+                <button class="modal-toggle-max" type="button">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="visually-hidden"> Плюс </span>
+                </button>
+              </span>
+            </div>
+          </form>
+          <button class="button modal-search-button" type="submit">
+            Найти
+          </button>
         </div>
       </div>
     </div>
