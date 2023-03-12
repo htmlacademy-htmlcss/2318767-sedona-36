@@ -389,12 +389,16 @@ body {
 .advantages-item:nth-child(3),
 .advantages-item:nth-child(5) {
   background: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item:nth-child(3) p,
+.advantages-item:nth-child(4) p,
+.advantages-item:nth-child(5) p {
   color: #333333;
 }
 
 .advantages-item:nth-child(4) {
   background: rgba(131, 179, 211, 0.02);
-  color: #333333;
 }
 
 .advantages-item:nth-child(3) h3:after,
@@ -431,7 +435,7 @@ body {
 .services-offer p {
   font-size: 22px;
   line-height: 26px;
-  color: #000000;
+  color: #333333;
   text-align: center;
   width: 503px;
   margin: 0;
@@ -493,7 +497,7 @@ body {
   margin: 0;
 }
 
-.service-order h2 {
+.interes {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -502,11 +506,12 @@ body {
   margin-bottom: 20px;
 }
 
-.service-order p {
+.interest-description {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   margin: 0;
+  color: #333333;
 }
 
 .service-order a {
@@ -578,6 +583,10 @@ body {
   padding-bottom: 54px;
 }
 
+.subscribe-catalog p {
+color: #333333;
+}
+
 .subscribe-form {
   font-family: inherit;
   display: flex;
@@ -640,12 +649,11 @@ body {
   color: #ffffff;
   background-color: #82b3d3;
   background-image: url("../images/background/background-filter.jpg");
-  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 412px;
+  min-height: 317px;
   margin: 0;
-  padding-bottom: 5px;
+  padding: 35px 70px 59px 70px;
 
 }
 
@@ -689,29 +697,37 @@ body {
   line-height: 78px;
   margin: 0;
   padding: 0;
-  padding-top: 35px;
-  padding-left: 70px;
   margin-bottom: 8px;
 }
 
 .catalog-select {
-  margin: 0 auto;
+  margin: 0;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   min-width: 1060px;
   min-height: 160px;
 }
 
-.catalog-select-box {
-  margin: 0;
+.catalog-select-box.infrastructure {
+  width: 150px;
   padding: 0;
-  border: 0;
+  margin: 0 70px 0 0;
 }
 
-.catalog-select-box {
-  margin-left: 68px;
-  width: 150px;
+.catalog-select-box.type {
+  width: 190px;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-select-box,
+.catalog-price-box,
+.catalog-button {
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  border: none;
 }
 
 .select {
@@ -741,7 +757,8 @@ body {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
-  margin-bottom: 32px;
+  margin: 0 0 32px 0;
+  padding: 0;
 }
 
 .catalog-select-item:not(:last-child) {
@@ -757,9 +774,9 @@ body {
 }
 
 .catalog-price-box {
+  width: 290px;
   padding: 0;
-  margin-left: 140px;
-  border: 0;
+  margin: 0 0 0 102px;
 }
 .catalog-price-box-input {
   display: grid;
@@ -940,9 +957,9 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  margin-top: 56px;
-  margin-left: 70px;
-  border-radius: 4px;
+  width: 191px;
+  padding: 0;
+  margin: 0 0 0 70px;
 }
 
 /* ПРИМЕНИТЬ=СБРОСИТЬ  */
@@ -950,9 +967,9 @@ body {
 .button.button-apply {
   background: #82b3d3;
   padding: 8px 50px;
+  margin: 56px 0 32px 0;
   border: 0;
   cursor: pointer;
-  margin-bottom: 32px;
 }
 
 .button.button-apply:hover {
@@ -975,10 +992,15 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 8px 50px;
   background: rgba(5, 5, 5, 0);
-  border: 0;
   cursor: pointer;
+  display: block;
+  background-color: #33333300;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  padding: 8px 58px;
+  margin-right: 0;
 }
 
 .button.button-reset:hover {
@@ -1001,16 +1023,20 @@ body {
 
 /* breadcrumbs */
 .breadcrumbs {
-  margin: 0;
+  margin: 0 0 34px 0;
   padding: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   display: flex;
-  margin-left: 70px;
-  margin-bottom: 34px;
   list-style-type: none;
+  flex-wrap: wrap;
+  min-width: 114px;
+  min-height: 21px;
 }
+
+
+
 
 .breadcrumbs-item {
   display: flex;
@@ -1075,6 +1101,7 @@ body {
 }
 
 /* Сортировка */
+
 .find-hotels-search {
   display: flex;
   width: 1060px;
@@ -1379,14 +1406,14 @@ body {
 
 .pagination-link.pagination-current,
 .pagination-link.pagination-dots {
-  background: #f2f2f2;
+  background-color: #f2f2f2;
   color: #000000;
 }
 
 .pagination-item a {
   display: block;
   text-align: center;
-  padding-top: 11px;
+  padding: 12px 12px;
 }
 
 .pagination-link {
@@ -1401,6 +1428,7 @@ body {
   font-size: 20px;
   line-height: 36px;
   text-transform: uppercase;
+  border-radius: 4px;
 }
 
 .pagination-link:not(.pagination-current, .pagination-dots):hover {
@@ -1476,6 +1504,7 @@ body {
 }
 
 .email {
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
