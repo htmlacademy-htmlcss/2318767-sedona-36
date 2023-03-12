@@ -40,14 +40,14 @@ body {
   color: #000000;
   background-color: #ffffff;
   position: relative;
-  margin: 0 auto;
   width: 1200px;
+  margin: 0 auto;
 }
 
 .page-header {
   color: #000000;
   background-color: #ffffff;
-  min-height: 65px;
+  min-height: 64px;
 }
 
 .main-page .main-filter {
@@ -74,12 +74,13 @@ body {
 }
 
 .page-container {
-  width: 100%;
+  width: 1200px;
   display: flex;
   flex-direction: column;
   min-height: 100%;
   box-shadow: -5px 0 10px -5px rgb(151 143 143 / 50%),
-    5px 0 10px -5px rgb(151 143 143 / 50%);
+  5px 0 10px -5px rgb(151 143 143 / 50%);
+
 }
 
 .logo {
@@ -90,36 +91,40 @@ body {
 
 .navigation {
   display: flex;
-  flex-wrap: wrap;
+  margin: 0 auto;
   min-height: 64px;
+  padding: 0 70px 0 70px;
 }
 
 .navigation-logo {
-  margin-left: 70px;
-  margin-right: 30px;
   position: absolute;
 }
 
 .navigation-list {
   margin: 0;
   padding: 0;
-  margin-left: 238px;
+  margin-left: 168px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  width: 440px;
+  min-height: 64px;
 }
+
 
 .navigation-user {
   padding: 0;
   margin: 0;
-  min-width: 268px;
+  width: 320px;
+  min-width: 64px;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-left: auto;
-  padding-right: 70px;
   color: #000000;
+  justify-content: flex-end;
 }
 
 .navigation-link {
@@ -155,6 +160,8 @@ body {
 
 .navigation-item-user {
   position: relative;
+  min-width: 44px;
+  min-height: 64px;
 }
 
 .navigation-item-user a {
@@ -635,9 +642,11 @@ body {
   background-image: url("../images/background/background-filter.jpg");
   width: 100%;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   min-height: 412px;
-  margin-top: -5px;
+  margin: 0;
+  padding-bottom: 5px;
+
 }
 
 .footer-address-phone-contact {
@@ -1474,7 +1483,7 @@ body {
   background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
   width: 429px;
-  height: 49px;
+  height: 51px;
   padding: 0;
   border: 2px solid rgba(80, 55, 80, 0);
   padding-left: 20px;
@@ -1505,9 +1514,9 @@ body {
   z-index: 2;
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .modal {
   position: relative;
