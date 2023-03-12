@@ -29,7 +29,6 @@ img {
   overflow: hidden;
   user-select: none;
   object-fit: contain;
-  object-position: center;
 }
 
 body {
@@ -1320,6 +1319,7 @@ color: #333333;
   padding-top: 8px;
   padding-bottom: 8px;
   text-align: center;
+  border: none;
 }
 
 .hotel-item-selected-button {
@@ -1328,6 +1328,7 @@ color: #333333;
   width: 140px;
   padding: 8px 1px 8px 1px;
   text-align: center;
+  border: none;
 }
 
 .hotel-item-select-button:hover {
