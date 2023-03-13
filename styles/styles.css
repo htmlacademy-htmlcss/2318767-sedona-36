@@ -144,14 +144,7 @@ body {
   position: relative;
 }
 
-.navigation-link-current:before {
-  position: absolute;
-  content: "";
-  width: calc(100% - 32px);
-  left: 16px;
-  bottom: 0;
-  border: 2px solid #756257;
-}
+
 
 .navigation-item a {
   padding: 19px 16px;
@@ -1140,7 +1133,7 @@ color: #333333;
 .find-hotels-search {
   display: flex;
   width: 1060px;
-  margin: 49px 70px 40px 70px;
+  margin: 51px 71px 35px 70px;
   align-items: center;
 }
 
@@ -1196,7 +1189,7 @@ color: #333333;
   display: block;
   width: 48px;
   height: 45px;
-  margin-right: 6px;
+  margin-right: 3px;
 }
 
 .card-type svg {
