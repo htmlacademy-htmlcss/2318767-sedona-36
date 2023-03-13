@@ -22,7 +22,7 @@
   box-sizing: border-box;
 }
 
-img {
+.page-container img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -108,6 +108,15 @@ body {
   min-height: 64px;
 }
 
+.navigation-link-current:before{
+  position: absolute;
+  content: "";
+  left: 16px;
+  right: 16px;
+  top: 63px;
+  height: 2px;
+  background-color: #756257;
+}
 
 .navigation-user {
   padding: 0;
@@ -1260,6 +1269,7 @@ color: #333333;
 
 .hotel-item-link img {
   margin-bottom: 16px;
+  display: block
 }
 
 .hotel-item-title {
