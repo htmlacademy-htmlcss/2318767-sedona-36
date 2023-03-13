@@ -24,10 +24,8 @@
 
 img {
   max-width: 100%;
-  display: block;
   height: auto;
-  overflow: hidden;
-  user-select: none;
+  object-fit: contain;
 }
 
 body {
