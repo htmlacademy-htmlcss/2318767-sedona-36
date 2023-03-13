@@ -615,7 +615,7 @@ color: #333333;
 .footer-social-list {
   margin: 0;
   padding: 0;
-  min-width: 142px;
+  width: 195px;
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -675,7 +675,9 @@ color: #333333;
 
 .footer-logo {
   color: #000000;
-  min-width: 115px;
+  min-width: 165px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .footer-logo:hover {
@@ -1292,6 +1294,7 @@ color: #333333;
   color: #000000;
   width: 300px;
   align-self: baseline;
+
 }
 
 .hotel-item-link img {
@@ -1318,6 +1321,7 @@ color: #333333;
   border-radius: 4px;
   column-gap: 20px;
   row-gap: 16px;
+  align-content: start;
 }
 
 .hotel-item-type {
@@ -1439,9 +1443,13 @@ color: #333333;
   margin-right: 8px;
 }
 
-.pagination-link.pagination-current,
-.pagination-link.pagination-dots {
+.pagination-link.pagination-current {
   background-color: #f2f2f2;
+  color: #000000;
+}
+
+.pagination-link.pagination-dots{
+  background-color: #ffffff;
   color: #000000;
 }
 
