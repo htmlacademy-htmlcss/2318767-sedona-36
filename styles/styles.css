@@ -49,6 +49,7 @@ body {
 .main-page .main-filter {
   color: #000000;
   background-color: #ffffff;
+  flex-grow: 1;
 }
 
 .footer-page {
