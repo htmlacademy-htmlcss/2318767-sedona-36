@@ -1107,30 +1107,58 @@ body {
 
 /* Боковые кнопки, не уверен в них */
 .button.button-light {
-  background-color: #ffffff;
-  border: 2px solid #e5e5e5;
+  background-image: url("../images/icons/view-list.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 48px;
+  min-height: 48px;
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
+  margin-left: auto;
+  background-color: #ffffff;
+}
+
+.button.button-light-slideshow {
+  background-image: url("../images/icons/view-slideshow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 48px;
+  min-height: 48px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  margin-left: auto;
+  background-color: #ffffff;
 }
 
 .button.button-light-checked {
-  background: #ffffff;
+  background-image: url("../images/icons/view-plates.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 48px;
+  min-height: 48px;
   border: 2px solid #000000;
   border-radius: 4px;
+  margin-left: auto;
+  background-color: #ffffff;
 }
 
-.button.button-light:hover {
+.button.button-light:hover,
+.button.button-light-slideshow:hover {
   border-color: #000000;
 }
 
-.button.button-light:focus {
+.button.button-light:focus,
+.button.button-light-slideshow:focus {
   border-color: #68a2ca;
 }
 
-.button.button-light:active {
+.button.button-light:active,
+.button.button-light-slideshow:active {
   border-color: #000000;
 }
 
-.button.button-light:disabled {
+.button.button-light:disabled,
+.button.button-light-slideshow:disabled {
   color: #ddd4d4;
   pointer-events: none;
 }
@@ -1278,7 +1306,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   width: 1060px;
-  margin: 40px 67px 44px;
+  margin: 37px 70px 44px;
   padding: 0;
   list-style-type: none;
 }
