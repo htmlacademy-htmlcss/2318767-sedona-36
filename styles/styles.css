@@ -14,19 +14,8 @@
   font-display: swap;
 }
 
-.html {
+html {
   height: 100%;
-}
-
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.page-container img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
 }
 
 body {
@@ -37,7 +26,14 @@ body {
   color: #000000;
   background-color: #ffffff;
   position: relative;
+  height: 100%;
   margin: 0;
+}
+
+.page-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .page-header {
@@ -49,12 +45,25 @@ body {
 .main-page .main-filter {
   color: #000000;
   background-color: #ffffff;
+}
+
+.main-container {
   flex-grow: 1;
 }
 
 .footer-page {
   color: #000000;
   background-color: #ffffff;
+}
+
+.page-container {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-shadow: -5px 0 10px -5px rgb(151 143 143 / 50%),
+  5px 0 10px -5px rgb(151 143 143 / 50%);
+  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -68,16 +77,6 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.page-container {
-  width: 1200px;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  box-shadow: -5px 0 10px -5px rgb(151 143 143 / 50%),
-  5px 0 10px -5px rgb(151 143 143 / 50%);
-  margin: 0 auto;
 }
 
 .logo {
@@ -117,6 +116,7 @@ body {
   top: 63px;
   height: 2px;
   background-color: #756257;
+  box-sizing: border-box;
 }
 
 .navigation-user {
@@ -216,6 +216,7 @@ body {
   left: 44%;
   z-index: 1;
   transform: translate(4px, 5px);
+  box-sizing: border-box;
 }
 
 .navigation-user li:nth-child(2)::after {
@@ -227,6 +228,7 @@ body {
   position: absolute;
   top: 16%;
   left: 44%;
+  box-sizing: border-box;
 }
 
 /* Button */
@@ -246,7 +248,7 @@ body {
 .welcome-sedona {
   background-image: url("../images/background/index-background.jpg");
   background-repeat: no-repeat;
-  background-color: #333333;
+  background-color: #756257;
   min-height: 485px;
 }
 
@@ -259,6 +261,7 @@ body {
   position: relative;
   background-repeat: no-repeat;
   bottom: -25px;
+  box-sizing: border-box;
 }
 
 .button:hover {
@@ -350,6 +353,7 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 150px;
+  box-sizing: border-box;
 }
 
 .advantages-title {
@@ -426,6 +430,7 @@ body {
 .advantages-item:nth-child(3) h3::after,
 .advantages-item:nth-child(4) h3::after {
   background: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
 }
 
 /* Услуги */
@@ -488,6 +493,7 @@ body {
   height: 72px;
   margin: 0 auto;
   margin-bottom: 30px;
+  box-sizing: border-box;
 }
 
 .service-item:nth-child(1) {
@@ -801,7 +807,7 @@ body {
 .catalog-price-box {
   width: 290px;
   padding: 0;
-  margin: 0 0 0 102px;
+  margin: 0 2px 0 102px;
 }
 
 .catalog-price-box-input {
@@ -1094,6 +1100,7 @@ body {
   right: 110px;
   position: absolute;
   min-width: 9px;
+  box-sizing: border-box;
 }
 
 .breadcrumbs-link:hover {
@@ -1247,11 +1254,14 @@ body {
   outline: solid 3px #83b3d3;
 }
 
-/* ВОТ ЭТО НАДО ПРОВЕРИТЬ */
+.select-input:disabled + .control-mark,
+.select-input:disabled + .control-mark-extra {
+  background-color: #74838d;
+  pointer-events: none;
+}
 
-.select-input:focus + .control-mark,
-.select-input:focus + .control-mark-extra:disabled {
-  color: #ddd4d4;
+.select-input:disabled ~ .choosing-input-text {
+  color: #74838d;
   pointer-events: none;
 }
 
@@ -1268,6 +1278,7 @@ body {
   background-color: #3f5e72;
   border-radius: 50%;
   content: "";
+  box-sizing: border-box;
 }
 
 .select-input:focus-visible + .mark {
@@ -1322,6 +1333,7 @@ body {
   display: block;
   margin-left: 70px;
   margin-bottom: 35px;
+  box-sizing: border-box;
 }
 
 .hotel-item-link {
@@ -1453,6 +1465,7 @@ body {
 
 .hotel-item-rating-star > span::before {
   content: url("../images/icons/star.svg");
+  box-sizing: border-box;
 }
 
 .pagination-main {
@@ -1631,9 +1644,9 @@ body {
   z-index: 2;
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .modal {
   position: relative;
@@ -1694,6 +1707,7 @@ body {
   display: block;
   transform: translate(15px, -10px);
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .modal-title {
@@ -1992,6 +2006,7 @@ body {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
