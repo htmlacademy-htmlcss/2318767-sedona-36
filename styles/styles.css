@@ -1628,9 +1628,9 @@ body {
   z-index: 2;
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal {
   position: relative;
@@ -1775,7 +1775,8 @@ body {
   margin-top: 5px;
 }
 
-.date-input {
+.date-input-in,
+.date-input-out {
   font: inherit;
   font-size: 20px;
   line-height: 24px;
