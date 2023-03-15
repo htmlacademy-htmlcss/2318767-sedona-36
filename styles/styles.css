@@ -246,7 +246,7 @@ body {
 .welcome-sedona {
   background-image: url("../images/background/index-background.jpg");
   background-repeat: no-repeat;
-  background-color: #333333;
+  background-color: #b6a456;
   min-height: 485px;
 }
 
@@ -1249,9 +1249,13 @@ body {
 
 /* ВОТ ЭТО НАДО ПРОВЕРИТЬ */
 
-.select-input:focus + .control-mark,
-.select-input:focus + .control-mark-extra:disabled {
-  color: #ddd4d4;
+.select-input:disabled + .control-mark {
+  background-color: #74838d;
+  pointer-events: none;
+}
+
+.select-input:disabled ~ .choosing-input-text {
+  color: #74838d;
   pointer-events: none;
 }
 
@@ -1631,9 +1635,9 @@ body {
   z-index: 2;
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .modal {
   position: relative;
