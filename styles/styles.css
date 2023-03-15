@@ -1555,7 +1555,7 @@ body {
   padding: 98px 70px 30px 68px;
 }
 
-.email {
+.email-field {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -1570,19 +1570,19 @@ body {
   padding-left: 20px;
 }
 
-.subscribe-form .email:hover {
+.subscribe-form .email-field:hover {
   background: #e6e6e6;
 }
 
-.subscribe-form .email:focus {
+.subscribe-form .email-field:focus {
   background: #e6e6e6;
 }
 
-.subscribe-form .email:not(:placeholder-shown) {
+.subscribe-form .email-field:not(:placeholder-shown) {
   border: 2px solid #000000;
 }
 
-.subscribe-form .email:active:disabled {
+.subscribe-form .email-field:active:disabled {
   color: #ddd4d4;
   pointer-events: none;
 }
@@ -1600,9 +1600,9 @@ body {
   z-index: 2;
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal {
   position: relative;
