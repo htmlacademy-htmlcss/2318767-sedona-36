@@ -313,7 +313,7 @@ body {
 .advantages-item-wrapper {
   display: flex;
   color: #ffffff;
- background-color: #82b3d3;
+  background-color: #82b3d3;
 }
 
 .advantages-item-other,
@@ -614,7 +614,7 @@ body {
 }
 
 .subscribe-catalog p {
- color: #333333;
+  color: #333333;
 }
 
 .subscribe-form {
@@ -906,17 +906,17 @@ body {
   width: 288px;
   height: 6px;
   margin-top: 39px;
-  background: grey;
+  background: #60686c;
 }
 
 .range-bar {
   position: absolute;
-  height: 4px;
+  height: 6px;
   background: #ffffff;
 }
 
 .toggle-min {
-  left: 0;
+  left: 1px;
   top: -8px;
 }
 
@@ -932,7 +932,7 @@ body {
 }
 
 .toggle-max {
-  right: 0;
+  right: -3px;
   top: -8px;
 }
 
@@ -948,14 +948,6 @@ body {
 .range-toggle:active {
   border: 2px solid #83b3d3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
-}
-
-.toggle-min {
-  left: 1px;
-}
-
-.toggle-max {
-  right: -3px;
 }
 
 .catalog-price-title {
@@ -1122,7 +1114,7 @@ body {
   background-position: center;
   min-width: 45px;
   min-height: 45px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   margin-left: auto;
   background-color: #ffffff;
@@ -1134,7 +1126,7 @@ body {
   background-position: center;
   min-width: 45px;
   min-height: 45px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   margin-left: auto;
   background-color: #ffffff;
@@ -1676,15 +1668,15 @@ body {
 }
 
 .modal-close-button:hover {
-  background-color:#E6E6E6 ;
+  background-color: #e6e6e6;
 }
 
 .modal-close-button:focus {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .modal-close-button:active {
-  background-color:#E6E6E6 ;
+  background-color: #e6e6e6;
 }
 
 .modal-close-button .check:active {
@@ -1762,7 +1754,7 @@ body {
 }
 
 .hotel-search .field:not(:placeholder-shown) {
-  border: 2px solid black;
+  border: 2px solid #000000;
   outline: none;
 }
 
@@ -1783,7 +1775,7 @@ body {
 }
 
 .message {
- margin-top: 4px;
+  margin-top: 4px;
 }
 
 .error-message {
