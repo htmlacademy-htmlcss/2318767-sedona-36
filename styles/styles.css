@@ -1618,7 +1618,7 @@ body {
   border: 2px solid #000000;
 }
 
-.subscribe-form .email-field:active:disabled {
+.subscribe-form .email-field:disabled {
   color: #ddd4d4;
   pointer-events: none;
 }
@@ -1636,9 +1636,9 @@ body {
   z-index: 2;
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal {
   position: relative;
@@ -1683,7 +1683,7 @@ body {
   opacity: 0.3;
 }
 
-.modal-close-button .check:disabled {
+.modal-close-button:disabled {
   color: #ffffff;
   background: #e5e5e5;
 }
