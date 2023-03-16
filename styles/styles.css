@@ -62,7 +62,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   box-shadow: -5px 0 10px -5px rgb(151 143 143 / 50%),
-  5px 0 10px -5px rgb(151 143 143 / 50%);
+    5px 0 10px -5px rgb(151 143 143 / 50%);
   margin: 0 auto;
 }
 
@@ -275,11 +275,6 @@ body {
 .button:active {
   color: rgba(255, 255, 255, 0.3);
   background: #756157;
-}
-
-.button:disabled {
-  color: #ffffff;
-  background: #e5e5e5;
 }
 
 .intro-sedona {
@@ -1636,9 +1631,9 @@ body {
   z-index: 2;
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .modal {
   position: relative;
@@ -2004,4 +1999,14 @@ body {
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
+}
+
+.button:disabled {
+  color: #ffffff;
+  background: #e5e5e5;
+}
+
+.button.subscribe-button:disabled {
+  color: #ffffff;
+  background: #e5e5e5;
 }
