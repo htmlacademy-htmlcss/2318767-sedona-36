@@ -901,7 +901,7 @@ body {
   width: 288px;
   height: 6px;
   margin-top: 39px;
-  background: #60686c;
+  background: rgba(255, 255, 255, 30%);
 }
 
 .range-bar {
@@ -1737,6 +1737,7 @@ body {
 
 .hotel-search .field::placeholder {
   color: #000000;
+  opacity: 0.6;
 }
 
 .hotel-search .field:hover {
@@ -1748,9 +1749,9 @@ body {
   outline: 3px solid #83b3d3;
 }
 
-.hotel-search .field:not(:placeholder-shown) {
-  border: 2px solid #000000;
-  outline: none;
+.hotel-search .field:focus:not(:placeholder-shown) {
+  background-color: #f2f2f2;
+  outline: 2px solid #000000;
 }
 
 .hotel-search .field:disabled {
@@ -1842,6 +1843,7 @@ body {
   opacity: 0.3;
   top: 48px;
   right: 22px;
+  cursor: pointer;
 }
 
 .modal-toggle-min {
